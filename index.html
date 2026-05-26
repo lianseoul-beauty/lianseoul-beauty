@@ -3510,6 +3510,46 @@
   <p class="pay-modal-footnote" data-i18n="payModalFootnote">Your cart has been saved. Payment will be enabled soon.</p>
 </div>
 
+<!-- ORDER LOOKUP NOTICE MODAL — pre-launch -->
+<div class="pay-modal-overlay" id="orderModalOverlay" onclick="closeOrderModal()"></div>
+<div class="pay-modal" id="orderModal" role="dialog" aria-modal="true" aria-labelledby="orderModalTitle">
+  <button class="pay-modal-close" onclick="closeOrderModal()" aria-label="Close">
+    <svg viewBox="0 0 24 24" width="20" height="20"><path d="M6 6l12 12M18 6L6 18" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+  </button>
+  <div class="pay-modal-icon">
+    <svg viewBox="0 0 24 24" width="22" height="22" fill="none">
+      <path d="M5 8l7-4 7 4v8l-7 4-7-4V8z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>
+      <path d="M5 8l7 4 7-4M12 12v8" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>
+    </svg>
+  </div>
+  <h3 id="orderModalTitle" data-i18n="orderModalTitle">Order tracking coming soon</h3>
+  <p data-i18n="orderModalDesc">Automated order tracking is being set up. For now, please send us your order number via Instagram DM, Facebook, or email — we'll check it for you right away.</p>
+  <div class="pay-modal-channels">
+    <a class="pay-modal-channel" href="https://www.instagram.com/lianseoul.beauty" target="_blank" rel="noopener noreferrer">
+      <svg viewBox="0 0 24 24" width="16" height="16" fill="none">
+        <rect x="3" y="3" width="18" height="18" rx="5" stroke="currentColor" stroke-width="1.6"/>
+        <circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="1.6"/>
+        <circle cx="17.5" cy="6.5" r="1" fill="currentColor"/>
+      </svg>
+      <span>Instagram DM @lianseoul.beauty</span>
+    </a>
+    <a class="pay-modal-channel" href="https://www.facebook.com/lianseoul.beauty/" target="_blank" rel="noopener noreferrer">
+      <svg viewBox="0 0 24 24" width="16" height="16" fill="none">
+        <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>
+      </svg>
+      <span>Facebook</span>
+    </a>
+    <a class="pay-modal-channel" href="mailto:ceo@lianseoul.com">
+      <svg viewBox="0 0 24 24" width="16" height="16" fill="none">
+        <rect x="3" y="5" width="18" height="14" rx="2" stroke="currentColor" stroke-width="1.6"/>
+        <path d="M3 7l9 6 9-6" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>
+      </svg>
+      <span>ceo@lianseoul.com</span>
+    </a>
+  </div>
+  <p class="pay-modal-footnote" data-i18n="orderModalFootnote">We typically respond within 24 hours.</p>
+</div>
+
 <!-- SUCCESS -->
 <div class="page" id="page-success">
   <div class="success-page">
@@ -3731,6 +3771,9 @@ const i18n = {
     payModalTitle: "Payment system coming soon",
     payModalDesc: "Our checkout is being finalized. In the meantime, please reach out via Instagram DM or Facebook to place your order — we'll take care of you personally.",
     payModalFootnote: "Your cart has been saved. Payment will be enabled soon.",
+    orderModalTitle: "Order tracking coming soon",
+    orderModalDesc: "Automated order tracking is being set up. For now, please send us your order number via Instagram DM, Facebook, or email — we'll check it for you right away.",
+    orderModalFootnote: "We typically respond within 24 hours.",
     secureCheckout: "Secure Checkout",
     checkoutSummaryTitle: "Order Summary",
     promoApply: "Apply", promoPlaceholder: "Promo code",
@@ -3833,6 +3876,9 @@ const i18n = {
     payModalTitle: "결제 시스템 곧 연결됩니다",
     payModalDesc: "결제 시스템 곧 연결됩니다. 그동안 인스타 DM(@lianseoul.beauty) 또는 페이스북 채널로 주문해주세요.",
     payModalFootnote: "장바구니는 저장되어 있어요. 결제는 곧 활성화됩니다.",
+    orderModalTitle: "주문 조회 곧 제공됩니다",
+    orderModalDesc: "자동 주문 조회 시스템을 준비 중입니다. 그동안 주문 번호를 인스타 DM, 페이스북, 또는 이메일로 보내주시면 바로 확인해드릴게요.",
+    orderModalFootnote: "보통 24시간 이내에 답변드립니다.",
     secureCheckout: "안전 결제",
     checkoutSummaryTitle: "주문 요약",
     promoApply: "적용", promoPlaceholder: "프로모 코드",
@@ -3935,6 +3981,9 @@ const i18n = {
     payModalTitle: "支付系统即将上线",
     payModalDesc: "支付系统正在最后调试中。在此期间,请通过 Instagram 私信(@lianseoul.beauty)或 Facebook 联系我们下单 — 我们会亲自为您服务。",
     payModalFootnote: "您的购物车已保存。支付功能即将开放。",
+    orderModalTitle: "订单查询即将上线",
+    orderModalDesc: "自动订单查询系统正在搭建中。在此期间,请通过 Instagram 私信、Facebook 或邮件发送您的订单号 — 我们会立即为您查询。",
+    orderModalFootnote: "我们通常在 24 小时内回复。",
     secureCheckout: "安全结账",
     checkoutSummaryTitle: "订单摘要",
     promoApply: "应用", promoPlaceholder: "优惠码",
@@ -4037,6 +4086,9 @@ const i18n = {
     payModalTitle: "Hệ thống thanh toán sắp ra mắt",
     payModalDesc: "Hệ thống thanh toán đang được hoàn thiện. Trong thời gian này, vui lòng liên hệ qua Instagram DM (@lianseoul.beauty) hoặc Facebook để đặt hàng — chúng tôi sẽ phục vụ bạn trực tiếp.",
     payModalFootnote: "Giỏ hàng của bạn đã được lưu. Thanh toán sẽ sớm được kích hoạt.",
+    orderModalTitle: "Tra cứu đơn hàng sắp ra mắt",
+    orderModalDesc: "Hệ thống tra cứu đơn hàng tự động đang được thiết lập. Hiện tại, vui lòng gửi mã đơn hàng của bạn qua Instagram DM, Facebook hoặc email — chúng tôi sẽ kiểm tra ngay cho bạn.",
+    orderModalFootnote: "Chúng tôi thường phản hồi trong vòng 24 giờ.",
     secureCheckout: "Thanh toán an toàn",
     checkoutSummaryTitle: "Tóm tắt đơn hàng",
     promoApply: "Áp dụng", promoPlaceholder: "Mã khuyến mãi",
@@ -4139,6 +4191,9 @@ const i18n = {
     payModalTitle: "Malapit nang available ang payment",
     payModalDesc: "Tinatapos pa namin ang checkout system. Sa ngayon, mag-DM sa Instagram (@lianseoul.beauty) o sa Facebook para mag-order — aalagaan ka namin nang personal.",
     payModalFootnote: "Na-save ang iyong cart. Malapit nang ma-enable ang bayad.",
+    orderModalTitle: "Malapit nang available ang order tracking",
+    orderModalDesc: "Inihahanda pa ang automated order tracking. Sa ngayon, ipadala ang iyong order number sa Instagram DM, Facebook, o email — agad namin itong i-check para sa iyo.",
+    orderModalFootnote: "Karaniwang sumasagot kami sa loob ng 24 oras.",
     secureCheckout: "Ligtas na Checkout",
     checkoutSummaryTitle: "Buod ng Order",
     promoApply: "I-apply", promoPlaceholder: "Promo code",
@@ -4444,11 +4499,11 @@ const staticPages = {
         <h2>3. Data Sharing</h2>
         <p>We do not sell your personal information. We share data only with: payment processors (Stripe), shipping carriers (DHL, EMS), and email service providers — all under strict data protection agreements.</p>
         <h2>4. Your Rights</h2>
-        <p>You can request access, correction, or deletion of your data anytime by contacting <a href="mailto:[email protected]">[email protected]</a>.</p>
+        <p>You can request access, correction, or deletion of your data anytime by contacting <a href="mailto:ceo@lianseoul.com">ceo@lianseoul.com</a>.</p>
         <h2>5. Cookies</h2>
         <p>We use cookies to remember your cart, language preference, and provide a personalized experience. You can manage cookies through your browser settings.</p>
         <h2>6. Contact</h2>
-        <p>For privacy concerns: <a href="mailto:[email protected]">[email protected]</a></p>
+        <p>For privacy concerns: <a href="mailto:ceo@lianseoul.com">ceo@lianseoul.com</a></p>
       `
     },
     ko: {
@@ -4468,11 +4523,11 @@ const staticPages = {
         <h2>3. 정보 공유</h2>
         <p>개인정보를 판매하지 않습니다. 다음의 경우에만 공유됩니다: 결제 처리사(Stripe), 배송 업체(DHL, EMS), 이메일 서비스 제공자 — 모두 엄격한 데이터 보호 협약 하에 운영됩니다.</p>
         <h2>4. 정보주체 권리</h2>
-        <p>언제든 <a href="mailto:[email protected]">[email protected]</a>으로 연락해 개인정보 열람, 수정, 삭제를 요청할 수 있습니다.</p>
+        <p>언제든 <a href="mailto:ceo@lianseoul.com">ceo@lianseoul.com</a>으로 연락해 개인정보 열람, 수정, 삭제를 요청할 수 있습니다.</p>
         <h2>5. 쿠키 사용</h2>
         <p>장바구니, 언어 설정 기억, 개인화된 경험 제공을 위해 쿠키를 사용합니다. 브라우저 설정에서 쿠키를 관리할 수 있습니다.</p>
         <h2>6. 문의</h2>
-        <p>개인정보 관련 문의: <a href="mailto:[email protected]">[email protected]</a></p>
+        <p>개인정보 관련 문의: <a href="mailto:ceo@lianseoul.com">ceo@lianseoul.com</a></p>
       `
     }
   },
@@ -4620,10 +4675,10 @@ const staticPages = {
         <div class="order-status-form">
           <input type="text" placeholder="Order Number (e.g., LS-2026-12345)">
           <input type="email" placeholder="Email Address">
-          <button onclick="alert('This is a demo. Order tracking will be available after backend integration.')">Track Order</button>
+          <button onclick="openOrderModal()">Track Order</button>
         </div>
         <div class="static-empty">
-          <p>Need help? Contact us via Messenger or email <a href="mailto:[email protected]">[email protected]</a></p>
+          <p>Need help? Contact us via Messenger or email <a href="mailto:ceo@lianseoul.com">ceo@lianseoul.com</a></p>
         </div>
       `
     },
@@ -4634,10 +4689,10 @@ const staticPages = {
         <div class="order-status-form">
           <input type="text" placeholder="주문 번호 (예: LS-2026-12345)">
           <input type="email" placeholder="이메일 주소">
-          <button onclick="alert('데모입니다. 백엔드 연동 후 실제 추적 가능합니다.')">주문 조회</button>
+          <button onclick="openOrderModal()">주문 조회</button>
         </div>
         <div class="static-empty">
-          <p>도움이 필요하신가요? 메신저나 이메일로 문의 주세요 <a href="mailto:[email protected]">[email protected]</a></p>
+          <p>도움이 필요하신가요? 메신저나 이메일로 문의 주세요 <a href="mailto:ceo@lianseoul.com">ceo@lianseoul.com</a></p>
         </div>
       `
     }
@@ -4668,7 +4723,7 @@ const staticPages = {
         </div>
         <div class="faq-item">
           <div class="faq-question">Do you offer wholesale or bulk pricing?</div>
-          <p>For wholesale inquiries, please email <a href="mailto:[email protected]">[email protected]</a>.</p>
+          <p>For wholesale inquiries, please email <a href="mailto:ceo@lianseoul.com">ceo@lianseoul.com</a>.</p>
         </div>
         <div class="faq-item">
           <div class="faq-question">Why do prices differ between currencies?</div>
@@ -4705,7 +4760,7 @@ const staticPages = {
         </div>
         <div class="faq-item">
           <div class="faq-question">도매 가격이 있나요?</div>
-          <p>도매 문의는 <a href="mailto:[email protected]">[email protected]</a>으로 이메일 부탁드립니다.</p>
+          <p>도매 문의는 <a href="mailto:ceo@lianseoul.com">ceo@lianseoul.com</a>으로 이메일 부탁드립니다.</p>
         </div>
         <div class="faq-item">
           <div class="faq-question">통화별 가격이 왜 다른가요?</div>
@@ -4840,7 +4895,7 @@ const staticPages = {
           <div class="contact-card">
             <h4>Email</h4>
             <p>For detailed inquiries, partnerships, and press.</p>
-            <p><strong>[email protected]</strong></p>
+            <p><strong>ceo@lianseoul.com</strong></p>
           </div>
           <div class="contact-card">
             <h4>Instagram</h4>
@@ -4870,7 +4925,7 @@ const staticPages = {
           <div class="contact-card">
             <h4>이메일</h4>
             <p>자세한 문의, 협업, 언론 문의용.</p>
-            <p><strong>[email protected]</strong></p>
+            <p><strong>ceo@lianseoul.com</strong></p>
           </div>
           <div class="contact-card">
             <h4>인스타그램</h4>
@@ -5520,10 +5575,22 @@ function closePayModal() {
   document.getElementById('payModal').classList.remove('show');
   document.body.style.overflow = '';
 }
+// ORDER LOOKUP MODAL
+function openOrderModal() {
+  document.getElementById('orderModalOverlay').classList.add('show');
+  document.getElementById('orderModal').classList.add('show');
+  document.body.style.overflow = 'hidden';
+}
+function closeOrderModal() {
+  document.getElementById('orderModalOverlay').classList.remove('show');
+  document.getElementById('orderModal').classList.remove('show');
+  document.body.style.overflow = '';
+}
 // ESC 키로 닫기
 document.addEventListener('keydown', (e) => {
-  if (e.key === 'Escape' && document.getElementById('payModal').classList.contains('show')) {
-    closePayModal();
+  if (e.key === 'Escape') {
+    if (document.getElementById('payModal').classList.contains('show')) closePayModal();
+    if (document.getElementById('orderModal') && document.getElementById('orderModal').classList.contains('show')) closeOrderModal();
   }
 });
 
